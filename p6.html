@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="p6.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<title>page5</title>
+</head>
+<body>
+  <header class="stitre">
+BOUDIAF Hibaterrahmane
+</header>
+<div id="navbar">
+ 
+  
+ <a class="active" href="page5.html" target="_blank">Photos</a>
+  <a class="active" href="log_in.php" target="_blank">Commentaires</a>
+  <a class="active" href="sign_in.php" target="_blank">Inscription</a>
+  <a class="active" href="log_in.php" target="_blank" >se connecter</a>
+  <a class="active" href="page2.html" target="_blank">Mon-cv</a>
+  <a class="active" href="index.html" target="_blank" >Accueil</a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+
+
+
+
+<div class=conn>
+    <b>Galerie d'images</b> 
+ </div>
+
+
+<center></center><br>
+<div>
+  <button class="b large-btn btn-white" onclick="prev()">prev</button>
+  <img border="5" id="slider" src="https://twenty-tech.com/wp-content/uploads/2018/12/Front-end-developemtn-1.png">
+  <button class="large-btn btn-white" onclick="next()">next</button>
+</div>
+</center>
+
+<script type="text/javascript">
+var images = [
+    'https://images.shiksha.com/mediadata/images/articles/1563454654phpeE71aT.jpeg',
+    'https://camo.githubusercontent.com/be67e1a93afa73290dd7739452743f0f0eab1109/68747470733a2f2f6e6f746c617572612e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031372f31302f66652d737065637472756d2e706e67',
+    'https://image.slidesharecdn.com/sinaubarengfrontendwebdeveloper-150429173350-conversion-gate01/95/sinau-bareng-frontend-web-development-dilo-malang-3-638.jpg?cb=1430346864',
+    'https://freelancermap.s3.eu-west-1.amazonaws.com/channel_incl1/becoming-a-front-end-developer---the-six-skills-you-will-need-3971.jpg',
+    'https://i.pinimg.com/originals/e1/d9/74/e1d974c1ab5419e9421cbe8fb2c4471b.jpg',
+    'https://twenty-tech.com/wp-content/uploads/2018/12/Front-end-developemtn-1.png',
+];
+var num = 0;
+function next() {
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >= images.length) {
+        num = 0;
+    }
+    slider.src = images[num];
+}
+function prev() {
+    var slider = document.getElementById('slider');
+    num--;
+    if(num < 0) {
+        num = images.length-1;
+    }
+    slider.src = images[num];
+}
+</script>
+
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+<footer class="footer">
+  
+   <a href="https://www.facebook.com/" class="fa fa-facebook" style="float:center"  target="_blank"></a>
+<a href="https://www.twitter.com/" class="fa fa-twitter" style="float:center"  target="_blank"></a>
+<a href="https://www.instagram.com/" class="fa fa-instagram" style="float:center"  target="_blank"></a>
+<a href="https://www.google.com/" class="fa fa-google" style="float:center" ></a> 
+<br>
+<p>© 2020 Boudiaf Hibaterrahmane.All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="p5.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+
+
+
+<head>
+	<title>page commentaire</title>
+</head>
+<body>
+ <header class="stitre">
+ BOUDIAF Hibaterrahmane
+</header>
+<div id="navbar">
+  <a class="active" href="page5.html" target="_blank">Photos</a>
+  <a class="active" href="log_in.php" target="_blank">Commentaires</a>
+  <a class="active" href="sign_in.php" target="_blank">Inscription</a>
+  <a class="active" href="log_in.php" target="_blank" >se connecter</a>
+  <a class="active" href="page2.html" target="_blank">Mon-cv</a>
+  <a class="active" href="index.html" target="_blank" >Accueil</a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+    alert("welcome!")
+    alert("Laissez-nous un commentaire positif SVP ")
+</script>
+
+<div class=conn>
+    <b>Commentaires</b> 
+ </div>
+
+<style>
+    .conn{
+        margin-top:15px;
+        margin-bottom:0px;
+        text-align:center;
+        font-size:35px;
+        font-family:'Chilanka', cursive;
+        color:#9c2450;
+        
+    }
+    table {
+    margin-top: 35px;margin-left: 550px;
+    margin-right: 150px;
+  
+    }
+    .wi{
+    padding: 5px;
+    margin-left: 150px;
+    margin-right: 150px;
+  
+    border-color: gray;
+    border: 5px solid gray;
+    }
+    .bo{
+    text-align:left;
+   
+    }
+ 
+    input{
+  align:center;   
+  width: 500px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  
+  
+    }
+    .btn{border:1px solid black;margin-left: 3px;
+    margin-right: 150px;margin-bottom:15px;
+  }
+</style>
+<center>
+<div class="wi">
+ <form  action="comment_page.php" method="post" >
+     <label>
+        <center> <input  style="height:120px;width:550px;overflow:scroll;" type="text" placeholder="ajouter un commentaire" name="comment">
+    </center> </label>
+     <button class="btn btn-white large-btn" type="submit">Continue</button>
+</form>
+
+
+
+<div class="bo wi" style="margin-left:110px;">
+<h2></h2>
+    <?php
+    $host     = "localhost";
+    $user     = "id14834087_root";
+    $password = "Hibakoubi.11";
+    $database = "id14834087_mycv";
+    
+
+    $connect = mysqli_connect($host,$user,$password,$database);
+    mysqli_query($connect,"set character_set_server='utf8'");
+    mysqli_query($connect,"set names 'utf8'");
+
+    if($connect) {
+        $request = "SELECT * FROM comments ORDER BY id DESC";
+    $result = mysqli_query($connect, $request);
+    if (mysqli_num_rows($result) >= 1) {
+        while($row = mysqli_fetch_assoc($result)){
+            echo "<p> comment by: ".$row["name"]."<br> and it is: ".$row["cmnt"]."</p>";
+        }
+    }
+
+    }
+    ?>
+</div>
+</div>
+</center>
+
+
+</br></br></br></br>
+</br></br></br></br>
+</br></br></br></br>
+</br></br></br></br>
+<div class="footer">
+    <a href="https://www.facebook.com/" class="fa fa-facebook" style="float:center"  target="_blank"></a>
+<a href="https://www.twitter.com/" class="fa fa-twitter" style="float:center"  target="_blank"></a>
+<a href="https://www.instagram.com/" class="fa fa-instagram" style="float:center"  target="_blank"></a>
+<a href="https://www.google.com/" class="fa fa-google" style="float:center" ></a> 
+</br>
+<p>© 2020 Boudiaf Hibaterrahmane.All rights reserved.</p>
+
+</div>
+
+</body>
+</html>

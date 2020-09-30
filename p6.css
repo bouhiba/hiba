@@ -1,0 +1,123 @@
+body{
+  background-image: url(https://wallpaperaccess.com/full/896713.jpg);
+  margin:0;}
+
+.stitre
+{
+font-size: 50px;
+background-image: url("https://us.123rf.com/450wm/yevgenijd/yevgenijd1709/yevgenijd170900048/86732479-fond-de-code-binaire-abstrait-tomber-streaming-fond-de-code-binaire-fond-d-%C3%A9cran-de-technologie-num.jpg?ver=6"); 
+text-align: center;
+font-family: 'Permanent Marker', cursive;
+margin: 0px;
+padding-top: 0px;
+color: white;
+}
+
+#navbar
+{
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  float: right;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color:;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-decoration: none;
+  color: white;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#333 ;
+   color: black;
+   text-align: center;
+   border-top: 10px; 
+   border-top-color:#9c2450 ; 
+}
+
+img
+{
+  width: 50%;
+  height: 300px;
+  border-image: 
+}
+
+.button{
+      display: inline-block;
+      text-decoration: none;
+      padding: 5px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+      align-items: center;
+    }
+
+
+    .large-btn{
+      padding: 10px 25px;
+    }
+
+    
+      .btn-white{
+      border:1px solid #9c2450;
+      color: black;
+      background: transparent;
+    }
+    .btn-white:hover{
+      color: grey;
+      background: #9c2450;
+    }
+.b
+{
+  margin-left: 250px;
+}
+.conn{
+        margin-top:15px;
+        margin-bottom:0px;
+        text-align:center;
+        font-size:35px;
+        font-family:'Chilanka', cursive;
+        color:#9c2450;
+        
+    }
